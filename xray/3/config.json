@@ -51,35 +51,31 @@
       "settings": {
         "vnext": [
           {
-            "address": "yh9.dtku41.xyz",
-            "port": 443,
+            "address": "1.162.51.106",
+            "port": 37898,
             "users": [
               {
-                "id": "ebfdccb6-7416-4b6e-860d-98587344d500",
+                "id": "ec302de4-6b3d-4f03-a228-3c6d303ed370",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
                 "encryption": "none",
-                "flow": ""
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "lg1.freessr2.xyz",
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.yahoo.com",
           "fingerprint": "chrome",
-          "show": false
-        },
-        "wsSettings": {
-          "path": "/xyakws",
-          "headers": {
-            "Host": "lg1.freessr2.xyz"
-          }
+          "show": false,
+          "publicKey": "v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ",
+          "shortId": "e12d7fdb",
+          "spiderX": ""
         }
       },
       "mux": {
@@ -102,6 +98,27 @@
       }
     }
   ],
+  "dns": {
+    "hosts": {
+      "dns.google": "8.8.8.8",
+      "proxy.example.com": "127.0.0.1"
+    },
+    "servers": [
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "geosite:cn",
+          "geosite:geolocation-cn"
+        ],
+        "expectIPs": [
+          "geoip:cn"
+        ]
+      },
+      "1.1.1.1",
+      "8.8.8.8",
+      "https://dns.google/dns-query"
+    ]
+  },
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
@@ -110,53 +127,18 @@
         "inboundTag": [
           "api"
         ],
-        "outboundTag": "api",
-        "enabled": true
+        "outboundTag": "api"
       },
       {
-        "id": "4903912855803990739",
         "type": "field",
-        "outboundTag": "direct",
-        "domain": [
-          "domain:example-example.com",
-          "domain:example-example2.com"
-        ],
-        "enabled": true
+        "port": "443",
+        "network": "udp",
+        "outboundTag": "block"
       },
       {
-        "id": "5708028511442260423",
-        "type": "field",
-        "outboundTag": "block",
-        "domain": [
-          "geosite:category-ads-all"
-        ],
-        "enabled": true
-      },
-      {
-        "id": "5285280340381945458",
-        "type": "field",
-        "outboundTag": "direct",
-        "domain": [
-          "geosite:cn"
-        ],
-        "enabled": true
-      },
-      {
-        "id": "5063426339087196734",
-        "type": "field",
-        "outboundTag": "direct",
-        "ip": [
-          "geoip:private",
-          "geoip:cn"
-        ],
-        "enabled": true
-      },
-      {
-        "id": "4919950405029472934",
         "type": "field",
         "port": "0-65535",
-        "outboundTag": "proxy",
-        "enabled": true
+        "outboundTag": "proxy"
       }
     ]
   }
